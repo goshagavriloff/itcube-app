@@ -29,7 +29,9 @@ const Post = ({ post }) => {
     }
   }, [isVideoMuted]);
 
- 
+  const isVideo=extensions.video.includes(post.ext);
+  const isImg=extensions.image.includes(post.ext);
+
   return (
     <div className='flex flex-col border-b-2 border-gray-200 pb-6'>
       <div>
@@ -55,7 +57,7 @@ const Post = ({ post }) => {
           className='rounded-3xl'
         >
           <NavLink to={`/posts/${post._id}`}>
-            {extensions.video.includes(post.ext) &&(
+            {isVideo &&(
                 <video
                 loop
                 ref={videoRef}
@@ -63,12 +65,18 @@ const Post = ({ post }) => {
                 className='lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
               ></video>
             )
-
             }
+
+            {isImg &&(
+                  <img
+                  src={post?.url}
+                  className='object-contain lg:w-[600px] h-[300px] md:h-[400px] lg:h-[528px] w-[200px] rounded-2xl cursor-pointer bg-gray-100'
+                />
+            )}
 
           </NavLink>
 
-          {isHover && (
+          {isVideo&&isHover && (
             <div className='absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] lg:w-[600px] p-3'>
               {playing ? (
                 <button onClick={onVideoPress}>

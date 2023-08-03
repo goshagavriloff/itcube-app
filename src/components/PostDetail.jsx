@@ -41,6 +41,8 @@ const PostDetail = () => {
   },[postId])
 
   if (!postDetail){return <Spinner message="Загрузка данных"/>}
+  const isVideo=extensions.video.includes(postDetail.ext);
+  const isImg=extensions.image.includes(postDetail.ext);
 
   return (
     <>
@@ -54,7 +56,7 @@ const PostDetail = () => {
           </div>
           <div className='relative'>
             <div className='lg:h-[100vh] h-[60vh]'>
-              {extensions.video.includes(postDetail.ext) &&(
+              {isVideo &&(
                   <video
                   ref={videoRef}
                   onClick={onVideoClick}
@@ -64,7 +66,17 @@ const PostDetail = () => {
                 ></video>
               )}
 
+              {isImg &&(
+                  <img
+                  src={postDetail?.url}
+                  className=' h-full '
+                />
+              )}
+
+
             </div>
+
+            {isVideo &&(
 
             <div className='absolute top-[45%] left-[40%]  cursor-pointer'>
               {!isPlaying && (
@@ -73,7 +85,9 @@ const PostDetail = () => {
                 </button>
               )}
             </div>
+            )}
           </div>
+          {isVideo &&(
           <div className='absolute bottom-5 lg:bottom-10 right-5 lg:right-10  cursor-pointer'>
             {isVideoMuted ? (
               <button onClick={() => setIsVideoMuted(false)}>
@@ -85,6 +99,8 @@ const PostDetail = () => {
               </button>
             )}
           </div>
+          )}
+
         </div>
       
         <div className='relative w-[1000px] md:w-[900px] lg:w-[700px]'>

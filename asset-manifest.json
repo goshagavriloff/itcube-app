@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/itcube-app/static/css/main.ef49871f.css",
+    "main.js": "/itcube-app/static/js/main.714f394a.js",
+    "index.html": "/itcube-app/index.html",
+    "main.ef49871f.css.map": "/itcube-app/static/css/main.ef49871f.css.map",
+    "main.714f394a.js.map": "/itcube-app/static/js/main.714f394a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef49871f.css",
+    "static/js/main.714f394a.js"
+  ]
+}

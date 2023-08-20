@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/itcube-app/static/css/main.ef49871f.css",
-    "main.js": "/itcube-app/static/js/main.714f394a.js",
+    "main.js": "/itcube-app/static/js/main.6f87c491.js",
     "index.html": "/itcube-app/index.html",
     "main.ef49871f.css.map": "/itcube-app/static/css/main.ef49871f.css.map",
-    "main.714f394a.js.map": "/itcube-app/static/js/main.714f394a.js.map"
+    "main.6f87c491.js.map": "/itcube-app/static/js/main.6f87c491.js.map"
   },
   "entrypoints": [
     "static/css/main.ef49871f.css",
-    "static/js/main.714f394a.js"
+    "static/js/main.6f87c491.js"
   ]
 }

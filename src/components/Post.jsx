@@ -56,7 +56,7 @@ const Post = ({ post }) => {
           onMouseLeave={() => setIsHover(false)}
           className='rounded-3xl'
         >
-          <NavLink to={`/posts/${post._id}`}>
+          <NavLink to={`/itcube-app/posts/${post._id}`}>
             {isVideo &&(
                 <video
                 loop

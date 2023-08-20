@@ -42,7 +42,7 @@ const Sidebar = () => {
       {showSidebar && (
         <div className='xl:w-400 w-20 flex flex-col justify-start mb-10 border-r-2 border-gray-100 xl:border-0 p-3 '>
           <div className='xl:border-b-2 border-gray-200 xl:pb-4'>
-            <NavLink to='/'>
+            <NavLink to='/itcube-app/'>
               <div className={pathname === '/' ? activeLink : normalLink}>
                 <p className='text-2xl'>
                   <AiFillHome />
@@ -61,7 +61,7 @@ const Sidebar = () => {
             </p>
             <div className='flex gap-3 flex-wrap'>
               {topics?.map((item) => (
-                <NavLink to={`/?topic=${item.name}`} key={item.name}>
+                <NavLink to={`?topic=${item.name}`} key={item.name}>
                   <div className={topic === item.name ? activeTopicStyle : topicStyle}>
                     <span className='font-bold text-2xl xl:text-md '>
                       <DynamicFaIcon name={item.icon} />

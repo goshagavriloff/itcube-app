@@ -8,12 +8,12 @@ const Navbar = ({searchTerm,setSearchTerm}) => {
   const navigate=useNavigate();
   const handleSearch = (e) => {
     e.preventDefault();
-    navigate('/search');
+    navigate('/itcube-app/search');
   };
 
   return (
     <div className='w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4'>
-    <NavLink to='/'>
+    <NavLink to='/itcube-app/'>
       <div className='w-[60px] md:w-[90px] md:h-[90px] h-[60px]'>
         <img src={Logo} alt="logo" className='cursor-pointer' />
       </div>
